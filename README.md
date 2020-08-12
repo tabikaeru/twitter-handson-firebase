@@ -2,7 +2,6 @@
 
 ```
 yarn
-yarn start
 ```
 
 # 実行環境環境
