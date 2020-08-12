@@ -5,6 +5,13 @@ yarn
 yarn start
 ```
 
+# 実行環境環境
+
+```
+node version v10.18.0
+yarn version 1.17.3
+```
+
 # Blaze Plan が使えない人用
 
 ## 説明
