@@ -1,2 +1,1 @@
-# Balzeプランを使用しない人用,ファイル名を ".env"に変えて，使用してください
 DATABASE_URL='https://YOUR_DATABASE_URL.firebaseio.com'

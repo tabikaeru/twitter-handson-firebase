@@ -2,9 +2,8 @@ import * as functions from 'firebase-functions'
 import { CreateUser, initialUser, createDocument } from '../../entities'
 import * as admin from 'firebase-admin'
 
-// Sparkプランを使う人
-export const createUserByHandler = functions.https.onCall(async (data, context) => {
-  const uid = context?.auth?.uid
+export const createUserCalalble = functions.https.onCall(async data => {
+  const uid = data?.uid
   if (!uid) {
     throw new Error('not found uid')
   }
