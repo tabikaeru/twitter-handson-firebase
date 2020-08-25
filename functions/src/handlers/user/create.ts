@@ -1,8 +1,9 @@
 import * as functions from 'firebase-functions'
 import { CreateUser, initialUser, createDocument } from '../../entities'
 import * as admin from 'firebase-admin'
+import { sumBy } from 'lodash'
 
-export const createUserCalalble = functions.https.onCall(async data => {
+export const createUserCalalble = functions.https.onCall(async (data) => {
   const uid = data?.uid
   if (!uid) {
     throw new Error('not found uid')
@@ -18,16 +19,12 @@ export const createUserCalalble = functions.https.onCall(async data => {
 
   const newUser = initialUser({ uid, name: '' })
 
-  const batch = db.batch()
-
-  batch.set(userRef, createDocument<CreateUser>(newUser))
-
-  await batch.commit()
+  await userRef.set(createDocument<CreateUser>(newUser))
 
   const result = {
     documentID: userRef.id,
     path: userRef.path,
-    value: newUser
+    value: newUser,
   }
 
   return { message: 'New User is created successfully', contents: [result] }
