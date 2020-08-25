@@ -1,7 +1,6 @@
 import * as functions from 'firebase-functions'
 import { CreateUser, initialUser, createDocument } from '../../entities'
 import * as admin from 'firebase-admin'
-import { sumBy } from 'lodash'
 
 export const createUserCalalble = functions.https.onCall(async (data) => {
   const uid = data?.uid
