@@ -1,1 +1,1 @@
-DATABASE_URL='https://YOUR_DATABASE_URL.firebaseio.com'
+DATABASE_URL='https://YOUR_PROJECT_NAME.firebaseio.com'
