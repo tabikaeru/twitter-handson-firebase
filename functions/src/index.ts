@@ -8,7 +8,7 @@ if (!process.env.DATABASE_URL) {
 
 if (process.env.DATABASE_URL) {
   admin.initializeApp({
-    credential: admin.credential.cert(__dirname + '/../google-service-account.json'),
+    credential: admin.credential.cert(__dirname + '/../../google-service-account.json'),
     databaseURL: process.env.DATABASE_URL
   })
 }

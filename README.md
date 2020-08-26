@@ -12,6 +12,10 @@ yarn version 1.17.3
 firebase-tools 8.7.0
 ```
 
+# firebase プロジェクトの登録
+
+`.firebaserc`の中の`YOUR_PROJECT_NAME`の部分 を自分が登録した firebase のプロジェクト名に変更してください．
+
 # Blaze Plan が使えない人用(ローカルで functions を動かす設定)
 
 ## 説明
